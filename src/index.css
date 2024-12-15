@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+Khmer:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .menu-text {
+    @apply font-arial text-white text-[12px] tracking-wider font-semibold uppercase flex items-center;
+  }
+
+  .menu-container {
+    @apply items-center flex justify-center flex-col cursor-pointer;
+  }
+
+  .menu-container:hover .menu-text {
+    @apply underline;
+  }
+
+  .slide-btn {
+    @apply p-3 rounded-full text-darkGray hover:text-black cursor-pointer;
+  }
+
+  .active {
+    @apply text-yPrimary;
+  }
+
+  .drop-menu-list {
+    @apply flex flex-col pb-5 p-3 w-60 text-sm border-t-[1px] min-w-full font-hind bg-secondary;
+  }
+
+  .drop-menu-list a {
+    @apply whitespace-nowrap text-wrap mt-[10px];
+  }
+
+  .drop-menu-list a:hover {
+    @apply text-yPrimary underline;
+  }
+
+  .menu-right {
+    @apply items-end drop-menu-list border-darkGray;
+  }
+
+  .menu-left {
+    @apply place-items-start drop-menu-list border-yPrimary;
+  }
+
+  .change-rate {
+    @apply flex items-center gap-[2px] font-arial text-[10px];
+  }
+
+  .line-b {
+    @apply py-5 mb-2 border-b;
+  }
+
+  .mobile-menu {
+    @apply gap-6 py-3 menu-text hover:underline;
+  }
+
+  .drop-menu {
+    @apply font-hind text-[12px] text-white hover:underline w-full pl-10;
+  }
+
+  .footer-menu-container {
+    @apply flex items-center justify-center gap-6 py-3 cursor-pointer;
+  }
+
+  .footer-menu {
+    @apply font-semibold tracking-wider font-arial text-[11px] text-white uppercase hover:underline;
+  }
+}
